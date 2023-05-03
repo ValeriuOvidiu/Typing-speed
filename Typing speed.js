@@ -4,6 +4,7 @@ window.onload = function () {
     addEventListener("keydown", keydownHandler)
     document.getElementById("score").innerHTML = "Wpm :" + score
     document.getElementById("time").innerHTML = "Time left: " + timeLeft + " s"
+    document.getElementById("start").innerHTML = "Start typing"
 }
 
 let afterTextCursor = 0
@@ -29,6 +30,7 @@ function keydownHandler(event) {
         timeIntervalId = setInterval(countTime, 1000)
         setTimeInterval = false
     }
+    document.getElementById("start").innerHTML = null
 }
 
 function countTime() {
@@ -216,6 +218,7 @@ function restart(event) {
         addEventListener("keydown", keydownHandler)
         document.getElementById("score").innerHTML = "Wpm :" + score
         document.getElementById("time").innerHTML = "Time left: " + timeLeft + " s"
+        document.getElementById("start").innerHTML = "Start typing"
     }
 }
 
